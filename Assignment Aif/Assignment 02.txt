@@ -1,0 +1,263 @@
+23. Find GCD of two numbers using for loop and if statement
+
+public class FindGCDExample1   
+{  
+public static void main(String[] args)   
+{  
+int x = 81, y = 153, gcd = 1;   
+for(int i = 1; i <= x && i <= y; i++)  
+{  
+if(x%i==0 && y%i==0)  
+{
+gcd = i;  
+}  
+System.out.printf("GCD of %d and %d is: %d", x, y, gcd);  
+}  
+}  
+
+Enter a number : 81
+Enter a number 153
+GCD of 81 and 153 is 9
+
+
+
+
+24. Find GCD of two numbers using while loop and if else statement
+
+import java.util.Scanner;  
+public class FindGCDExample  
+{  
+public static void main(String[] args)   
+{  
+int a, b, gcd = 0;  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter a Number: ");  
+a = sc.nextInt();     
+System.out.print("Enter a Number: ");  
+b = sc.nextInt();  
+gcd = findGCD(a, b);  
+System.out.println("GCD of " + a + " and " + b + " =  " + gcd);  
+}  
+public static int findGCD(int a, int b)  
+{  
+while(b != 0)  
+{  
+if(a > b)  
+{  
+a = a - b;  
+}  
+else  
+{  
+b = b - a;  
+}  
+}  
+return a;  
+}  
+}  
+
+Enter a number : 81
+Enter a number 153
+GCD of 81 and 153 is 9
+
+
+
+
+
+
+25. GCD for both positive and negative numbers both positive and negative
+
+public class Gcd
+{
+ public static void main(String[] args)
+ {
+       
+        Scanner scanner = new Scanner(System.in);  
+        System.out.print("Enter a Number 1:");
+        int n1 = scanner.nextInt();
+        
+        System.out.print("Enter a Number 2:");
+        int n2 = scanner.nextInt();
+        
+        // Always set to positive
+        n1 = ( n1 > 0) ? n1 : -n1;
+        n2 = ( n2 > 0) ? n2 : -n2;
+        while(n1 != n2)
+        {
+            if(n1 > n2)
+                n1 -= n2;
+            else
+                n2 -= n1;
+        }
+        System.out.println("G.C.D = " + n1);
+    }
+}
+
+Enter a number : 81
+Enter a number 153
+GCD of 81 and 153 is 9
+
+Enter a number : 81
+Enter a number -153
+GCD of 81 and -153 is 9
+
+
+
+
+
+
+
+26. LCM using while Loop and if Statement
+Enter a number : 72
+Enter a number : 120
+LCM is 360
+
+
+
+
+
+
+27. Calculate LCM using GCD
+Enter a number : 72E
+nter a number : 120
+LCM is 360
+
+
+
+
+
+
+
+28. Display uppercase alphabet using for loop
+public class UpperAlphabate {
+  public static void main(String[] args) {
+
+    char c;
+
+    for(c = 'A'; c <= 'Z'; ++c)
+      System.out.print(c + " ");
+    }
+}
+
+All Uppercase Letters Are:ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+
+
+
+
+
+29. Display lowercase alphabet using for loop
+
+public class LowerCase {
+  public static void main(String[] args) {
+
+    char c;
+
+    for(c = 'a'; c <= 'z'; ++c)
+      System.out.print(c + " ");
+    }
+}
+
+All Lowercase Letters Are:
+abcdefghijklmnopqrstuvwxyz
+
+
+
+
+
+30. Count Number of Digits in an Integer using while loop
+
+public class CountDigits {
+
+  public static void main(String[] args) {
+
+    int count = 0, num = 9812;
+
+    while (num != 0) {
+      num /= 10;
+      ++count;
+    }
+
+    System.out.println("Number of digits: " + count);
+  }
+}
+
+Enter a number : 9812
+Number of digits: 4
+Enter a number : 00009812
+Number of digits: 4
+
+
+
+
+
+32. Reverse a Number using a while loop in Java
+
+public class Reverse {
+  public static void main(String[] args)
+ {
+
+    int num = 00009812, reversed = 0;
+    
+    System.out.println("Original Number: " + num);
+
+    while(num != 0) {
+ 
+      int digit = num % 10;
+      reversed = reversed * 10 + digit;
+      num /= 10;
+    }
+
+    System.out.println("Reversed Number: " + reversed);
+  }
+}
+
+Enter a number : 00009812
+Number of digits: 4
+
+
+public class Reverse {
+  public static void main(String[] args)
+ {
+
+    int num = 00009812, reversed = 0;
+    
+    System.out.println("Original Number: " + num);
+
+    while(num != 0) {
+ 
+      int digit = num % 10;
+      reversed = reversed * 10 + digit;
+      num /= 10;
+    }
+
+    System.out.println("Reversed Number: " + reversed);
+  }
+}
+
+Enter a number : 9812
+Reverse Number is : 2189
+
+
+
+
+
+
+33. Reverse a number using a for loop in Java
+
+public class Reverse{
+  public static void main(String[] args) {
+    
+    int num =9812 , reversed = 0;
+
+    for(;num != 0; num /= 10) {
+      int digit = num % 10;
+      reversed = reversed * 10 + digit;
+    }
+
+    System.out.println("Reversed Number: " + reversed);
+  }
+}
+
+Enter a number : 9812
+Reverse Number is : 2189
+
